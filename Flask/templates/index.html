@@ -1,0 +1,144 @@
+<html>
+ <head>
+        <title>Sentiment Classifications and Opinion Mining</title>
+
+         <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+  
+        <style>
+            body{
+                background-image: url(../static/image.jpeg);
+                background-color: rgb(255, 255, 255);
+                background-repeat: no-repeat;
+                background-size: cover;
+                opacity: 0.7;
+            }
+            input[type=submit] {
+            width: 30%;
+            background-color:green;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            }
+
+            textarea {
+            color:black;
+            padding: 5px;
+            padding: 12px 20px;
+            }
+            .txta {
+            width: 100%;
+            max-width: 500px;
+            min-height: 100px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            overflow: hidden;
+            line-height: 1.4;
+            }
+            .box{
+            width: 450px;
+            height: 400px;	
+            margin-top:8px;margin-left: 8px;margin-bottom: 8px;margin-right: 8px;
+            transition: 1s;
+            padding-left:35px;
+            padding-top:40px;
+            padding-right:20px;
+            padding-bottom:20px;
+                color:whitesmoke;
+                text-align: justify;
+            border-radius: 20px;
+            }
+            .box:hover{
+                transform: scale(1);
+                border: none;
+                box-shadow: 1px 1px 1px #000;
+                margin-top:18px;margin-left: 8px;margin-bottom: 8px;margin-right: 8px;
+                padding-right:15px;
+                padding-top:7px;
+                background-color: white;
+                color:#0000A0;
+            }
+            .container1
+            {
+                width: 90%;
+                display: flex;
+                flex-direction: row;
+            }
+            .box1{
+            width:00 px;
+            height:200px;
+            opacity:0.8;
+            margin-left:300px;
+            padding-top:1px;
+            }
+            input[type=text], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            size:30px;
+            }
+            .rectbox{
+            width: 1000px;
+            height: 50px;
+            background: #ccc;
+            box-shadow: 5px 5px 10px #999;
+                     
+                 }
+            </style>
+    </head>
+</head>
+<body  class="body1"> 
+ 
+        <center><h1><div class="animate__animated animate__bounceIn" style="color:#0000A0">
+        </br><font size="6.2"><div class="rectbox">Sentiment Classification and Opinion Mining on Airline Reviews</font></h1>
+        </center>
+        </div>
+        </div>
+        <div class="container1">        
+            <div class="box"  style="margin-left: 40px; margin-top: 20px;"><font size="4.2">
+                <div class="animate__animated animate__backInRight">
+             Opinion Mining (OM) or Sentiment Analysis (SA) can be defined as the task of detecting,
+             extracting and classifying opinions on something. It is a type of the processing of the 
+             natural language (NLP) to track the public mood to a certain law, policy, or marketing, etc.
+              It involves a way that development for the collection and examination of comments and opinions about 
+              legislation, laws, policies, etc., which are posted on the social media. The process of information 
+              extraction is very important because it is a very useful technique but also a challenging task. 
+              That mean, to extract sentiment from an object in the web-wide, need to automate opinion-mining 
+              systems to do it. The existing techniques for sentiment analysis include machine learning 
+              (supervised and unsupervised), and lexical-based approaches. Hence, the main aim of this project 
+              presents a survey of sentiment analysis (SA) and opinion mining (OM) approaches, 
+              various techniques used that related in this field.</font></div>
+        </div>
+
+ <div class="box1" style="margin-top:10px;width:30%;"><div class="animate__animated animate__backInRight">
+        
+   <form  method="POST">
+  <div class="container">
+    <p align = 'center'style="font-size:25px">Type your tweet here</p>
+    <form action='/predict' method="post">
+	<p align = "center">
+    <input type="text" name="name" placeholder="Enter your Name.." required>
+    <input type="text" name="airlines" placeholder="Enter Airlines.."  required>
+	<input type="text"  align = "Center" placeholder="Enter the tweet" name="tweet" id="rcorners1" required>
+	</p>
+	<table align='center' style='padding:0.5px; border-spacing: 10px; font-size:20 px'>	
+	<tr>
+	<td colspan="2" align="center" ><button class="button5" type="submit" name="predict" align='center' value="Predict" onclick="window.location.href = 'G:\Gayatri Files\Smartbridge\TwitterSentimentAnalysis\templates\index.html'" ><font size="4">Predict</font></button></td>
+	</tr>
+	<tr>
+	<td colspan="2" align = "center"><b>{{ypred}}</b></td>
+	</tr>
+	</table>
+	</form>
+   
+    
+  </div>
+
+</form>
